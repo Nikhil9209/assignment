@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dropdown Menu Fixed</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: sans-serif;
+    }
+
+    .main {
+      background-color: #2D87BB;
+      height: 80px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 5%;
+    }
+
+    .main ul.menu {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      background-color: black;
+      margin: 0;
+      padding: 0;
+    }
+
+    .main ul.menu > li {
+      position: relative;
+      padding: 10px 15px;
+      color: white;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+    }
+
+    .main ul.menu > li:hover {
+      color: blue;
+    }
+
+    
+    .dropdown {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: black;
+      z-index: 1000;
+    }
+
+    .menu > li:hover .dropdown {
+      display: block;
+    }
+
+    .dropdown ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .dropdown ul li {
+      position: relative;
+      width: 150px;
+      padding: 10px;
+      color: white;
+      white-space: nowrap;
+    }
+
+    .dropdown ul li:hover {
+      background-color: #333;
+    }
+
+    
+    .drop1 {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 100%;
+      background-color: black;
+      z-index: 1000;
+    }
+
+    .dropdown ul li:hover > .drop1 {
+      display: block;
+    }
+
+    .drop1 li {
+      padding: 10px;
+      width: 150px;
+      color: white;
+    }
+
+    .drop1 li:hover {
+      background-color: #333;
+    }
+  </style>
+</head>
+<body>
+  <div class="main">
+    <span>
+      <img src="xyz.png" alt="Logo" style="height: 50px; max-width: 120px;" />
+    </span>
+    <ul class="menu">
+      <li>Home</li>
+      <li>About</li>
+      <li>
+        Work <i class="fa-solid fa-caret-down" style="margin-left: 5px;"></i>
+        <div class="dropdown">
+          <ul>
+            <li>Design</li>
+            <li>Development</li>
+            <li>
+              Photography <i class="fa-solid fa-caret-right" style="float: right;"></i>
+              <ul class="drop1">
+                <li>Nature</li>
+                <li>People</li>
+                <li>Pets</li>
+              </ul>
+            </li>
+            <li>Writing</li>
+          </ul>
+        </div>
+      </li>
+      <li>Contact</li>
+    </ul>
+  </div>
+</body>
+</html>
