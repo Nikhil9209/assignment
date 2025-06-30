@@ -1,0 +1,12 @@
+button{
+    background-color: aqua  ;
+    height: 100px;
+    width: 100px;
+    transition: 0.5s;
+    
+}
+button:hover{
+     transform: scale(0.5);
+     background-color: black;
+     color: white;
+}

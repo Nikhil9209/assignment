@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bc{
+            height: 400px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background:pink;
+            animation-name: text;
+            animation-duration: 3s;
+            animation-iteration-count: 1;
+        }
+
+        @keyframes text{
+            from{
+                opacity: 0;
+                transform: translateX(-100px);
+
+            }
+            to{ 
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+    </style>
+
+</head>
+<body>
+    <div class="bc">
+        <div><h1>Welcome to CSS World</h1></div>
+    </div>
+</body>
+</html>
